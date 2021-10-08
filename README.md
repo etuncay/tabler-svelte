@@ -1,15 +1,27 @@
-## Get started
+## Açıklama
 
-Install the dependencies...
+[tabler](https://preview.tabler.io/) yönetici panel temasını  [svelte](https://svelte.dev/) teması haline getirilmektedir.
+
+Not: Çeviri işlemi daha devam etmektedir.
+
+## Kurulum
+
+Bağımlılıkları kurmak...
 
 ```bash
 npm install
 ```
 
-...then start [Rollup](https://rollupjs.org):
+...Başlatma [Rollup](https://rollupjs.org):
 
 ```bash
 npm run dev
 ```
 
-Navigate to [localhost:5000](http://localhost:5000). You should see your app running. Edit a component file in `src`, save it, and reload the page to see your changes.
+[localhost:5000](http://localhost:5000) adresine gidin
+
+or 
+
+```bash
+npm run dev -- --open
+```
