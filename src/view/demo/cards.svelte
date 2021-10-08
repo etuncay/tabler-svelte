@@ -1,13 +1,15 @@
+<script>
+	import TblrCard from '../../components/TblrCard.svelte';
+</script>
 <div class="page-body">
 	<div class="container-xl">
 		<div class="row row-cards">
 			<div class="col-md-6 col-xl-4">
 				<div class="row row-cards">
 					<div class="col-12">
-						<div class="card">
-							<div class="card-body">
-								<p>This is some text within a card body.</p>
-							</div>
+						<TblrCard>
+							<p>This is some text within a card body.</p>
+						</TblrCard>
 						</div>
 					</div>
 					<div class="col-12 border-0">
