@@ -1,5 +1,6 @@
 <script>
 	import TblrCard from '../../components/TblrCard.svelte';
+	  
 </script>
 <div class="page-body">
 	<div class="container-xl">
@@ -10,40 +11,23 @@
 						<TblrCard>
 							<p>This is some text within a card body.</p>
 						</TblrCard>
-						</div>
-					</div>
-					<div class="col-12 border-0">
-						<div class="card">
-							<div class="card-body">
-								<p>This is a borderless card.</p>
-							</div>
-						</div>
 					</div>
 					<div class="col-12">
 						<!--1111111111111111111111111-->
-						<div class="card">
-							<div class="card-body">
-								<h3 class="card-title">Card with bottom image</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam deleniti fugit incidunt, iste, itaque minima
-									neque pariatur perferendis sed suscipit velit vitae voluptatem.</p>
-							</div>
-							<div class="card-img-bottom img-responsive img-responsive-16by9" style="background-image: url(/static/photos/56614e12b2a7bd68.jpg)"></div>
-						</div>
-
+						<TblrCard {...{image: '/static/photos/56614e12b2a7bd68.jpg', allign: 'bottom', title: 'Card with bottom image'}}>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam deleniti fugit incidunt, iste, itaque minima
+								neque pariatur perferendis sed suscipit velit vitae voluptatem.</p>
+						</TblrCard>
 					</div>
 					<div class="col-12">
-						<div class="card card-active">
-							<div class="card-body">
-								<p>This is a card with active state.</p>
-							</div>
-						</div>
+						<TblrCard active={true}>
+							<p>This is some text within a card body.</p>
+						</TblrCard>
 					</div>
 					<div class="col-12">
-						<div class="card card-inactive">
-							<div class="card-body">
-								<p>This is some text inactive state.</p>
-							</div>
-						</div>
+						<TblrCard active={false}>
+							<p>This is some text within a card body.</p>
+						</TblrCard>
 					</div>
 					<div class="col-12">
 						<div class="card">
@@ -347,39 +331,16 @@
 			<div class="col-md-6 col-xl-8">
 				<div class="row row-cards">
 					<div class="col-12">
-						<!--222222222222222222222222-->
-						<div class="card">
-							<div class="row row-0">
-								<div class="col-3">
-									<img src="/static/photos/2854fd67ddbd6217.jpg" class="w-100 h-100 object-cover" alt="Card side image">
-								</div>
-								<div class="col">
-									<div class="card-body">
-										<h3 class="card-title">Card with left side image</h3>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam deleniti fugit incidunt, iste, itaque minima
-											neque pariatur perferendis sed suscipit velit vitae voluptatem.</p>
-									</div>
-								</div>
-							</div>
-						</div>
-
+						<TblrCard {...{image: '/static/photos/56614e12b2a7bd68.jpg', allign: 'left', title: 'Card with left image'}}>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam deleniti fugit incidunt, iste, itaque minima
+								neque pariatur perferendis sed suscipit velit vitae voluptatem.</p>
+						</TblrCard>
 					</div>
 					<div class="col-12">
-						<!--3333333333333333333-->
-						<div class="card">
-							<div class="row row-0">
-								<div class="col-3 order-md-last">
-									<img src="/static/photos/de6d0fd1feebb6a2.jpg" class="w-100 h-100 object-cover" alt="Card side image">
-								</div>
-								<div class="col">
-									<div class="card-body">
-										<h3 class="card-title">Card with right side image</h3>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam deleniti fugit incidunt, iste, itaque minima
-											neque pariatur perferendis sed suscipit velit vitae voluptatem.</p>
-									</div>
-								</div>
-							</div>
-						</div>
+						<TblrCard {...{image: '/static/photos/56614e12b2a7bd68.jpg', allign: 'right', title: 'Card with right image'}}>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam deleniti fugit incidunt, iste, itaque minima
+								neque pariatur perferendis sed suscipit velit vitae voluptatem.</p>
+						</TblrCard>
 
 					</div>
 					<div class="col-12">
@@ -406,14 +367,10 @@
 							<div class="col-xl-6">
 								<div class="row row-cards">
 									<div class="col-12">
-										<div class="card">
-											<div class="card-img-top img-responsive img-responsive-16by9" style="background-image: url(/static/photos/9f36332564ca271d.jpg)"></div>
-											<div class="card-body">
-												<h3 class="card-title">Card with top image</h3>
-												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam deleniti fugit incidunt, iste, itaque minima
-													neque pariatur perferendis sed suscipit velit vitae voluptatem.</p>
-											</div>
-										</div>
+										<TblrCard {...{image: '/static/photos/56614e12b2a7bd68.jpg', allign: 'top', title: 'Card with top image'}}>
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam deleniti fugit incidunt, iste, itaque minima
+												neque pariatur perferendis sed suscipit velit vitae voluptatem.</p>
+										</TblrCard>
 									</div>
 									<div class="col-12">
 										<div class="card">
@@ -536,25 +493,24 @@
 							<div class="col-xl-6">
 								<div class="row row-cards">
 									<div class="col-12">
-										<div class="card">
-											<div class="card-body">
-												<h3 class="card-title">Card title</h3>
-												<div class="card-subtitle">Card subtitle</div>
-												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam deleniti fugit incidunt, iste, itaque minima
-													neque pariatur perferendis sed suscipit velit vitae voluptatem.</p>
-											</div>
-										</div>
+										<TblrCard {...{title: 'Card title', subtitle: 'Card subtitle'}}>
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam deleniti fugit incidunt, iste, itaque minima
+												neque pariatur perferendis sed suscipit velit vitae voluptatem.</p>
+										</TblrCard>
+
 									</div>
 									<div class="col-12">
-										<div class="card">
-											<div class="card-header">
-												<h3 class="card-title">Header title</h3>
-											</div>
-											<div class="card-body">
-												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam deleniti fugit incidunt, iste, itaque minima
-													neque pariatur perferendis sed suscipit velit vitae voluptatem.</p>
-											</div>
-										</div>
+										<TblrCard {...{title: 'Card title', subtitle: 'Card subtitle', header:true}}>
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam deleniti fugit incidunt, iste, itaque minima
+												neque pariatur perferendis sed suscipit velit vitae voluptatem.</p>
+										</TblrCard>
+										
+									</div>
+									<div class="col-12">
+										<TblrCard {...{title: 'Card title', header:true}}>
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam deleniti fugit incidunt, iste, itaque minima
+												neque pariatur perferendis sed suscipit velit vitae voluptatem.</p>
+										</TblrCard>
 									</div>
 									<div class="col-12">
 										<div class="card">
