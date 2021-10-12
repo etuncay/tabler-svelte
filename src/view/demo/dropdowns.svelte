@@ -1,3 +1,7 @@
+
+<script >
+		import { TblrDropdown, TblrDropdownItem } from "../../components/index";
+</script>
 <div class="page-body">
 	<div class="container-xl">
 		<div class="row">
@@ -39,6 +43,15 @@
 				</div>
 			</div>
 			<div class="col-sm-6 col-lg-3">
+				<TblrDropdown {...{header:'Dropdown header'}}>
+					<TblrDropdownItem {...{link : 'https://google.com', target: '_blank', label : 'Action'}}></TblrDropdownItem>
+					<TblrDropdownItem {...{link : 'https://google.com', target: '_blank', label : 'Action'}}></TblrDropdownItem>
+					<TblrDropdownItem {...{link : 'https://google.com', target: '_blank', label : 'Action'}}></TblrDropdownItem>
+					<TblrDropdownItem {...{link : 'https://google.com', target: '_blank', label : 'Action', badge: '12'}}></TblrDropdownItem>
+					<TblrDropdownItem {...{link : 'https://google.com', target: '_blank', label : 'Action', active:true }}></TblrDropdownItem>
+					<TblrDropdownItem {...{link : 'https://google.com', target: '_blank', label : 'Action', active:false}}></TblrDropdownItem>
+					<TblrDropdownItem {...{link : 'https://google.com', target: '_blank', label : 'Action', divider:true}}></TblrDropdownItem>
+				</TblrDropdown>
 				<div class="dropdown-menu dropdown-menu-demo">
 					<a class="dropdown-item" href="#">
 						Action
